@@ -3,19 +3,21 @@ pragma solidity ^0.8.8;
 
 import "./PriceConverter.sol";
 
+error NotOwner();
+
 contract FundMe {
 
     using PriceCoverter for uint256;
 
-    uint256 public minimumUsd = 50 * 1e18;
+    uint256 public constant MINIMUM_USD = 50 * 1e18;
 
     address[] public funders;
     mapping(address => uint256) public addressToAmountFunded;
 
-    address public owner;
+    address public immutable i_owner;
 
     constructor() {
-        owner = msg.sender;
+        i_owner = msg.sender;
     }
 
     function fund() public payable {
@@ -23,7 +25,7 @@ contract FundMe {
 
         
         // 1. How do we send ETH to this address
-        require(msg.value.getConversionRate() >= minimumUsd, "Didn't send enough!");
+        require(msg.value.getConversionRate() >= MINIMUM_USD, "Didn't send enough!");
         funders.push(msg.sender);
         addressToAmountFunded[msg.sender] = msg.value;
     }
@@ -59,8 +61,14 @@ contract FundMe {
     }
 
     modifier onlyOwner {
-        require(msg.sender == owner, "The sender is not the owner!");
+        // require(msg.sender == i_owner, "The sender is not the owner!");
+        if(msg.sender != i_owner) {
+            revert NotOwner();
+        }
         _;
     }
 
 }
+
+// 837,615
+// 818,073
