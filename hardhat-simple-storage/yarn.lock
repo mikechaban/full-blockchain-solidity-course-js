@@ -517,6 +517,11 @@
     table "^6.8.0"
     undici "^5.14.0"
 
+"@nomiclabs/hardhat-waffle@^2.0.6":
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/@nomiclabs/hardhat-waffle/-/hardhat-waffle-2.0.6.tgz#d11cb063a5f61a77806053e54009c40ddee49a54"
+  integrity sha512-+Wz0hwmJGSI17B+BhU/qFRZ1l6/xMW82QGXE/Gi+WTmwgJrQefuBs1lIf7hzQ1hLk6hpkvb/zwcNkpVKRYTQYg==
+
 "@pkgjs/parseargs@^0.11.0":
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/@pkgjs/parseargs/-/parseargs-0.11.0.tgz#a77ea742fab25775145434eb1d2328cf5013ac33"
@@ -2945,10 +2950,10 @@ solidity-comments-extractor@^0.0.8:
   resolved "https://registry.yarnpkg.com/solidity-comments-extractor/-/solidity-comments-extractor-0.0.8.tgz#f6e148ab0c49f30c1abcbecb8b8df01ed8e879f8"
   integrity sha512-htM7Vn6LhHreR+EglVMd2s+sZhcXAirB1Zlyrv5zBuTxieCvjfnRpd7iZk75m/u6NOlEyQ94C6TWbBn2cY7w8g==
 
-solidity-coverage@^0.8.0:
-  version "0.8.10"
-  resolved "https://registry.yarnpkg.com/solidity-coverage/-/solidity-coverage-0.8.10.tgz#8985f9f80a34432daf397fc13d994e689f3df92d"
-  integrity sha512-6nvlWLnCjBIVnCgTZiIo2XBI62O3YJuU83xj+bklnH/B+dXGTjuQB7SccZfysUC3LFkjtZO/KjzUJ/hiSlkXWw==
+solidity-coverage@^0.8.11:
+  version "0.8.11"
+  resolved "https://registry.yarnpkg.com/solidity-coverage/-/solidity-coverage-0.8.11.tgz#c95798f2c3e885c49dcfc9c43ee570d112214785"
+  integrity sha512-yy0Yk+olovBbXn0Me8BWULmmv7A69ZKkP5aTOJGOO8u61Tu2zS989erfjtFlUjDnfWtxRAVkd8BsQD704yLWHw==
   dependencies:
     "@ethersproject/abi" "^5.0.9"
     "@solidity-parser/parser" "^0.18.0"
