@@ -12,17 +12,21 @@ describe("FundMe", function () {
         // const accountZero = accounts[0]
         deployer = (await getNamedAccounts()).deployer
         await deployments.fixture(["all"])
-        fundMe = await ethers.getContract("FundMe", deployer)
-        mockV3Aggregator = await ethers.getContract(
-            "MockV3Aggregator",
-            deployer
+
+        const myContract = await deployments.get("FundMe")
+        fundMe = await ethers.getContractAt(myContract.abi, myContract.address)
+
+        const mymockV3Aggregator = await deployments.get("MockV3Aggregator")
+        mockV3Aggregator = await ethers.getContractAt(
+            mymockV3Aggregator.abi,
+            mymockV3Aggregator.address
         )
     })
 
     describe("constructor", async function () {
         it("Sets the aggregator addresses correctly", async function () {
             const response = await fundMe.priceFeed()
-            assert.equal(response, mockV3Aggregator.address)
+            assert.equal(response, mockV3Aggregator.target)
         })
     })
 })
