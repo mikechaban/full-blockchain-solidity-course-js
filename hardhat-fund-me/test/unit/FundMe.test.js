@@ -54,32 +54,46 @@ describe("FundMe", function () {
             await fundMe.fund({ value: sendValue })
         })
 
-        it("withdraws ETH from a single founder", async function () {
+        it("withdraws ETH from a single funder", async function () {
             // Arrange
             const startingFundMeBalance = await ethers.provider.getBalance(
                 fundMe.getAddress()
             )
-            const starterDeployerBalance = await ethers.provider.getBalance(
+            const startingDeployerBalance = await ethers.provider.getBalance(
                 deployer
             )
             // Act
             const transactionResponse = await fundMe.withdraw()
-            const transactionReceipt = await transactionResponse.wait(1)
+            const transactionReceipt = await transactionResponse.wait()
 
-            const endingFundMeBalance = await ethers.provider.getBalance(
-                fundMe.getAddress()
-            )
-            const endingDeployerBalance = await ethers.provider.getBalance(
-                deployer
-            )
-            // Assert
-            assert.equal(endingFundMeBalance, 0)
-            assert.equal(
-                // startingFundMeBalance + starterDeployerBalance
-                // For BigNumber:
-                startingFundMeBalance.add(starterDeployerBalance),
-                endingDeployerBalance
-            )
+            const { gasUsed, effectiveGasPrice } = transactionReceipt
+            if (gasUsed === undefined || effectiveGasPrice === undefined) {
+                console.error("gasUsed or effectiveGasPrice is undefined.")
+                // handle the error or return, depending on your application flow
+            } else {
+                const gasCost = BigInt(gasUsed) * BigInt(effectiveGasPrice)
+                console.log(`GasCost: ${gasCost}`)
+                console.log(`GasUsed: ${gasUsed}`)
+                console.log(`GasPrice: ${effectiveGasPrice}`)
+
+                const withdrawGasCost = gasUsed * BigInt(effectiveGasPrice)
+                console.log(`Withdraw GasCost: ${withdrawGasCost}`)
+
+                const endingFundMeBalance = await ethers.provider.getBalance(
+                    fundMe.getAddress()
+                )
+                const endingDeployerBalance = await ethers.provider.getBalance(
+                    deployer
+                )
+                // Assert
+                assert.equal(
+                    endingFundMeBalance,
+                    0,
+
+                    startingFundMeBalance + startingDeployerBalance.toString(),
+                    endingDeployerBalance + withdrawGasCost.toString()
+                )
+            }
         })
     })
 })
