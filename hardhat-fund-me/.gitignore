@@ -13,3 +13,6 @@ gas-report.txt
 # solidity-coverage files
 /coverage
 /coverage.json
+
+# random
+FundMe-ytumanov.test.js
