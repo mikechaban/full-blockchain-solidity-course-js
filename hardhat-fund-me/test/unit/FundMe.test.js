@@ -54,7 +54,7 @@ describe("FundMe", function () {
             await fundMe.fund({ value: sendValue })
         })
 
-        it("withdraws ETH from a single founder", async function () {
+        it("withdraws ETH from a single funder", async function () {
             // Arrange
             const startingFundMeBalance = await fundMe.provider.getBalance(
                 fundMe.address
@@ -83,6 +83,22 @@ describe("FundMe", function () {
                 startingFundMeBalance.add(startingDeployerBalance).toString(),
                 endingDeployerBalance.add(gasCost).toString()
             )
+        })
+        it("allows us to withdraw with multiple funders", async function () {
+            // Arrange
+            const accounts = await ethers.getSigners()
+
+            for (let i = 1; i < 6; i++) {
+                const fundMeConnectedContract = await fundMe.connect(
+                    accounts[i]
+                )
+                await fundMeConnectedContract.fund({ value: sendValue })
+            }
+            const startingFundMeBalance = await fundMe.provider.getBalance(
+                fundMe.address
+            )
+            const startingDeployerBalance = await fundMe.provider.getBalance(
+                deployer
         })
     })
 })
