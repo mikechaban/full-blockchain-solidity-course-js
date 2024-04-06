@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/jasmine_sprout/Desktop/full-blockchain-solidity-course-js/hardhat-lottery/contracts/Raffle.sol": {
-      "lastModificationDate": 1712284964976,
-      "contentHash": "c32723f2e82e14acd77edd32ac2c3fb8",
+      "lastModificationDate": 1712296725791,
+      "contentHash": "5feb26fe8c0073f5d32af01140f56d16",
       "sourceName": "contracts/Raffle.sol",
       "solcConfig": {
         "version": "0.8.6",
