@@ -3,11 +3,19 @@ pragma solidity ^0.8.6;
 
 import "@chainlink/contracts/src/v0.8/vrf/VRFConsumerBaseV2.sol";
 import "@chainlink/contracts/src/v0.8/vrf/VRFCoordinatorV2.sol";
+import "@chainlink/contracts/src/v0.8/automation/interfaces/AutomationCompatibleInterface.sol";
 
 error Raffle__NotEnoughETHEntered();
 error Raffle__TransferFailed();
+error Raffle__NotOpen();
 
-contract Raffle is VRFConsumerBaseV2 {
+contract Raffle is VRFConsumerBaseV2, AutomationCompatibleInterface {
+    /* Type declarations */
+    enum RaffleState {
+        OPEN,
+        CALCULATING
+    } // ^ This is actually like uint256 where 0 = OPEN, 1 = CALCULATING
+
     /* State Variables */
     uint256 private immutable i_entranceFee;
     address payable[] private s_players;
@@ -20,6 +28,7 @@ contract Raffle is VRFConsumerBaseV2 {
 
     /* Lottery Variables */
     address private s_recentWinner;
+    RaffleState private s_raffleState;
 
     /* Events */
     event RaffleEntered(address indexed player);
@@ -38,6 +47,7 @@ contract Raffle is VRFConsumerBaseV2 {
         i_subscriptionId = subscriptionId;
         i_entranceFee = entranceFee;
         i_callBackGasLimit = callbackGasLimit;
+        s_raffleState = RaffleState.OPEN;
     }
 
     function enterRaffle() public payable {
@@ -50,13 +60,25 @@ contract Raffle is VRFConsumerBaseV2 {
             revert Raffle__NotEnoughETHEntered();
         }
 
+        if (s_raffleState != RaffleState.OPEN) {
+            revert Raffle__NotOpen();
+        }
+
         s_players.push(payable(msg.sender));
 
         // Events
         emit RaffleEntered(msg.sender);
     }
 
+    /**
+     * @dev This is the function that the chainlink Keeper nodes call
+     * they look for the `upkeepNeeded` to return `true`
+     */
+    function checkUpKeep(bytes calldata /* checkData */) external override {}
+
     function requestRandomWinner() external {
+        s_raffleState = RaffleState.CALCULATING;
+
         uint256 requestId = i_VRFCoordinator.requestRandomWords(
             i_gasLane, // gasLane
             i_subscriptionId,
@@ -74,6 +96,7 @@ contract Raffle is VRFConsumerBaseV2 {
         uint256 indexOfWinner = randomWords[0] % s_players.length;
         address payable recentWinner = s_players[indexOfWinner];
         s_recentWinner = recentWinner;
+        s_raffleState = RaffleState.OPEN;
         (bool success, ) = recentWinner.call{value: address(this).balance}("");
         // require(success)
         if (!success) {
