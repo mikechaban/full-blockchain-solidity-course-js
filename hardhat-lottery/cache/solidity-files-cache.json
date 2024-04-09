@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/jasmine_sprout/Desktop/full-blockchain-solidity-course-js/hardhat-lottery/contracts/Raffle.sol": {
-      "lastModificationDate": 1712296725791,
-      "contentHash": "5feb26fe8c0073f5d32af01140f56d16",
+      "lastModificationDate": 1712607577712,
+      "contentHash": "d926fff60842070acd44da2db6a4b097",
       "sourceName": "contracts/Raffle.sol",
       "solcConfig": {
         "version": "0.8.6",
@@ -37,7 +37,8 @@
       },
       "imports": [
         "@chainlink/contracts/src/v0.8/vrf/VRFConsumerBaseV2.sol",
-        "@chainlink/contracts/src/v0.8/vrf/VRFCoordinatorV2.sol"
+        "@chainlink/contracts/src/v0.8/vrf/VRFCoordinatorV2.sol",
+        "@chainlink/contracts/src/v0.8/automation/interfaces/AutomationCompatibleInterface.sol"
       ],
       "versionPragmas": [
         "^0.8.6"
@@ -141,6 +142,176 @@
         "VRFCoordinatorV2"
       ]
     },
+    "/Users/jasmine_sprout/Desktop/full-blockchain-solidity-course-js/hardhat-lottery/node_modules/@chainlink/contracts/src/v0.8/automation/interfaces/AutomationCompatibleInterface.sol": {
+      "lastModificationDate": 1712171404469,
+      "contentHash": "c52969cee392918edbf23f914e01c0dc",
+      "sourceName": "@chainlink/contracts/src/v0.8/automation/interfaces/AutomationCompatibleInterface.sol",
+      "solcConfig": {
+        "version": "0.8.6",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "AutomationCompatibleInterface"
+      ]
+    },
+    "/Users/jasmine_sprout/Desktop/full-blockchain-solidity-course-js/hardhat-lottery/node_modules/@chainlink/contracts/src/v0.8/shared/interfaces/AggregatorV3Interface.sol": {
+      "lastModificationDate": 1712171405427,
+      "contentHash": "29c520cd24ad9a3f2c9cf285fee25f05",
+      "sourceName": "@chainlink/contracts/src/v0.8/shared/interfaces/AggregatorV3Interface.sol",
+      "solcConfig": {
+        "version": "0.8.6",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "AggregatorV3Interface"
+      ]
+    },
+    "/Users/jasmine_sprout/Desktop/full-blockchain-solidity-course-js/hardhat-lottery/node_modules/@chainlink/contracts/src/v0.8/shared/interfaces/LinkTokenInterface.sol": {
+      "lastModificationDate": 1712171405445,
+      "contentHash": "d10c0d716a0f43bb442c14effc9bd39f",
+      "sourceName": "@chainlink/contracts/src/v0.8/shared/interfaces/LinkTokenInterface.sol",
+      "solcConfig": {
+        "version": "0.8.6",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "LinkTokenInterface"
+      ]
+    },
+    "/Users/jasmine_sprout/Desktop/full-blockchain-solidity-course-js/hardhat-lottery/node_modules/@chainlink/contracts/src/v0.8/shared/access/ConfirmedOwner.sol": {
+      "lastModificationDate": 1712171405406,
+      "contentHash": "1ed782c1e3014a255f9171aefc3cdde3",
+      "sourceName": "@chainlink/contracts/src/v0.8/shared/access/ConfirmedOwner.sol",
+      "solcConfig": {
+        "version": "0.8.6",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./ConfirmedOwnerWithProposal.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ConfirmedOwner"
+      ]
+    },
     "/Users/jasmine_sprout/Desktop/full-blockchain-solidity-course-js/hardhat-lottery/node_modules/@chainlink/contracts/src/v0.8/interfaces/TypeAndVersionInterface.sol": {
       "lastModificationDate": 1712171405053,
       "contentHash": "99239ca600c3a8878735c8c17d46981a",
@@ -229,134 +400,6 @@
         "ChainSpecificUtil"
       ]
     },
-    "/Users/jasmine_sprout/Desktop/full-blockchain-solidity-course-js/hardhat-lottery/node_modules/@chainlink/contracts/src/v0.8/shared/interfaces/LinkTokenInterface.sol": {
-      "lastModificationDate": 1712171405445,
-      "contentHash": "d10c0d716a0f43bb442c14effc9bd39f",
-      "sourceName": "@chainlink/contracts/src/v0.8/shared/interfaces/LinkTokenInterface.sol",
-      "solcConfig": {
-        "version": "0.8.6",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "LinkTokenInterface"
-      ]
-    },
-    "/Users/jasmine_sprout/Desktop/full-blockchain-solidity-course-js/hardhat-lottery/node_modules/@chainlink/contracts/src/v0.8/shared/interfaces/AggregatorV3Interface.sol": {
-      "lastModificationDate": 1712171405427,
-      "contentHash": "29c520cd24ad9a3f2c9cf285fee25f05",
-      "sourceName": "@chainlink/contracts/src/v0.8/shared/interfaces/AggregatorV3Interface.sol",
-      "solcConfig": {
-        "version": "0.8.6",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "AggregatorV3Interface"
-      ]
-    },
-    "/Users/jasmine_sprout/Desktop/full-blockchain-solidity-course-js/hardhat-lottery/node_modules/@chainlink/contracts/src/v0.8/shared/access/ConfirmedOwner.sol": {
-      "lastModificationDate": 1712171405406,
-      "contentHash": "1ed782c1e3014a255f9171aefc3cdde3",
-      "sourceName": "@chainlink/contracts/src/v0.8/shared/access/ConfirmedOwner.sol",
-      "solcConfig": {
-        "version": "0.8.6",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "./ConfirmedOwnerWithProposal.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "ConfirmedOwner"
-      ]
-    },
     "/Users/jasmine_sprout/Desktop/full-blockchain-solidity-course-js/hardhat-lottery/node_modules/@chainlink/contracts/src/v0.8/shared/interfaces/IERC677Receiver.sol": {
       "lastModificationDate": 1712171405436,
       "contentHash": "c73f0d0e1d270b32a66512039681f520",
@@ -397,48 +440,6 @@
       ],
       "artifacts": [
         "IERC677Receiver"
-      ]
-    },
-    "/Users/jasmine_sprout/Desktop/full-blockchain-solidity-course-js/hardhat-lottery/node_modules/@chainlink/contracts/src/v0.8/vrf/VRF.sol": {
-      "lastModificationDate": 1712171406238,
-      "contentHash": "fc962cfafa1813a2de9ce843424099b8",
-      "sourceName": "@chainlink/contracts/src/v0.8/vrf/VRF.sol",
-      "solcConfig": {
-        "version": "0.8.6",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "VRF"
       ]
     },
     "/Users/jasmine_sprout/Desktop/full-blockchain-solidity-course-js/hardhat-lottery/node_modules/@chainlink/contracts/src/v0.8/vrf/interfaces/VRFCoordinatorV2Interface.sol": {
@@ -483,6 +484,48 @@
         "VRFCoordinatorV2Interface"
       ]
     },
+    "/Users/jasmine_sprout/Desktop/full-blockchain-solidity-course-js/hardhat-lottery/node_modules/@chainlink/contracts/src/v0.8/vrf/VRF.sol": {
+      "lastModificationDate": 1712171406238,
+      "contentHash": "fc962cfafa1813a2de9ce843424099b8",
+      "sourceName": "@chainlink/contracts/src/v0.8/vrf/VRF.sol",
+      "solcConfig": {
+        "version": "0.8.6",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "VRF"
+      ]
+    },
     "/Users/jasmine_sprout/Desktop/full-blockchain-solidity-course-js/hardhat-lottery/node_modules/@chainlink/contracts/src/v0.8/vrf/interfaces/BlockhashStoreInterface.sol": {
       "lastModificationDate": 1712171406377,
       "contentHash": "842fa56dd44a26339c202c65e93c2306",
@@ -523,6 +566,92 @@
       ],
       "artifacts": [
         "BlockhashStoreInterface"
+      ]
+    },
+    "/Users/jasmine_sprout/Desktop/full-blockchain-solidity-course-js/hardhat-lottery/node_modules/@chainlink/contracts/src/v0.8/shared/access/ConfirmedOwnerWithProposal.sol": {
+      "lastModificationDate": 1712171405411,
+      "contentHash": "8f6ff288f6d625614e910f54d701385c",
+      "sourceName": "@chainlink/contracts/src/v0.8/shared/access/ConfirmedOwnerWithProposal.sol",
+      "solcConfig": {
+        "version": "0.8.6",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IOwnable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ConfirmedOwnerWithProposal"
+      ]
+    },
+    "/Users/jasmine_sprout/Desktop/full-blockchain-solidity-course-js/hardhat-lottery/node_modules/@chainlink/contracts/src/v0.8/shared/interfaces/IOwnable.sol": {
+      "lastModificationDate": 1712171405440,
+      "contentHash": "b3ae9b7345205a0a65f3e0f89c176d88",
+      "sourceName": "@chainlink/contracts/src/v0.8/shared/interfaces/IOwnable.sol",
+      "solcConfig": {
+        "version": "0.8.6",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IOwnable"
       ]
     },
     "/Users/jasmine_sprout/Desktop/full-blockchain-solidity-course-js/hardhat-lottery/node_modules/@chainlink/contracts/src/v0.8/vendor/@arbitrum/nitro-contracts/src/precompiles/ArbSys.sol": {
@@ -737,92 +866,6 @@
       ],
       "artifacts": [
         "Context"
-      ]
-    },
-    "/Users/jasmine_sprout/Desktop/full-blockchain-solidity-course-js/hardhat-lottery/node_modules/@chainlink/contracts/src/v0.8/shared/access/ConfirmedOwnerWithProposal.sol": {
-      "lastModificationDate": 1712171405411,
-      "contentHash": "8f6ff288f6d625614e910f54d701385c",
-      "sourceName": "@chainlink/contracts/src/v0.8/shared/access/ConfirmedOwnerWithProposal.sol",
-      "solcConfig": {
-        "version": "0.8.6",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "../interfaces/IOwnable.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "ConfirmedOwnerWithProposal"
-      ]
-    },
-    "/Users/jasmine_sprout/Desktop/full-blockchain-solidity-course-js/hardhat-lottery/node_modules/@chainlink/contracts/src/v0.8/shared/interfaces/IOwnable.sol": {
-      "lastModificationDate": 1712171405440,
-      "contentHash": "b3ae9b7345205a0a65f3e0f89c176d88",
-      "sourceName": "@chainlink/contracts/src/v0.8/shared/interfaces/IOwnable.sol",
-      "solcConfig": {
-        "version": "0.8.6",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IOwnable"
       ]
     }
   }
