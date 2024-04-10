@@ -48,7 +48,7 @@
       ]
     },
     "/Users/jasmine_sprout/Desktop/full-blockchain-solidity-course-js/hardhat-lottery/node_modules/@chainlink/contracts/src/v0.8/vrf/VRFConsumerBaseV2.sol": {
-      "lastModificationDate": 1712716076419,
+      "lastModificationDate": 1712716712717,
       "contentHash": "eb9cc526ef59dfc4d644f56ddca0633a",
       "sourceName": "@chainlink/contracts/src/v0.8/vrf/VRFConsumerBaseV2.sol",
       "solcConfig": {
@@ -90,7 +90,7 @@
       ]
     },
     "/Users/jasmine_sprout/Desktop/full-blockchain-solidity-course-js/hardhat-lottery/node_modules/@chainlink/contracts/src/v0.8/vrf/VRFCoordinatorV2.sol": {
-      "lastModificationDate": 1712716076417,
+      "lastModificationDate": 1712716712706,
       "contentHash": "7c13ff3ffccb89736e65e55338fce9b6",
       "sourceName": "@chainlink/contracts/src/v0.8/vrf/VRFCoordinatorV2.sol",
       "solcConfig": {
@@ -143,7 +143,7 @@
       ]
     },
     "/Users/jasmine_sprout/Desktop/full-blockchain-solidity-course-js/hardhat-lottery/node_modules/@chainlink/contracts/src/v0.8/automation/interfaces/AutomationCompatibleInterface.sol": {
-      "lastModificationDate": 1712171404469,
+      "lastModificationDate": 1712716895383,
       "contentHash": "c52969cee392918edbf23f914e01c0dc",
       "sourceName": "@chainlink/contracts/src/v0.8/automation/interfaces/AutomationCompatibleInterface.sol",
       "solcConfig": {
@@ -185,7 +185,7 @@
       ]
     },
     "/Users/jasmine_sprout/Desktop/full-blockchain-solidity-course-js/hardhat-lottery/node_modules/@chainlink/contracts/src/v0.8/ChainSpecificUtil.sol": {
-      "lastModificationDate": 1712716074690,
+      "lastModificationDate": 1712716469369,
       "contentHash": "0905fefedc147bf8935f26a239e7b2f6",
       "sourceName": "@chainlink/contracts/src/v0.8/ChainSpecificUtil.sol",
       "solcConfig": {
@@ -230,7 +230,7 @@
       ]
     },
     "/Users/jasmine_sprout/Desktop/full-blockchain-solidity-course-js/hardhat-lottery/node_modules/@chainlink/contracts/src/v0.8/interfaces/TypeAndVersionInterface.sol": {
-      "lastModificationDate": 1712171405053,
+      "lastModificationDate": 1712716717525,
       "contentHash": "99239ca600c3a8878735c8c17d46981a",
       "sourceName": "@chainlink/contracts/src/v0.8/interfaces/TypeAndVersionInterface.sol",
       "solcConfig": {
@@ -272,7 +272,7 @@
       ]
     },
     "/Users/jasmine_sprout/Desktop/full-blockchain-solidity-course-js/hardhat-lottery/node_modules/@chainlink/contracts/src/v0.8/shared/interfaces/IERC677Receiver.sol": {
-      "lastModificationDate": 1712171405436,
+      "lastModificationDate": 1712716893748,
       "contentHash": "c73f0d0e1d270b32a66512039681f520",
       "sourceName": "@chainlink/contracts/src/v0.8/shared/interfaces/IERC677Receiver.sol",
       "solcConfig": {
@@ -314,7 +314,7 @@
       ]
     },
     "/Users/jasmine_sprout/Desktop/full-blockchain-solidity-course-js/hardhat-lottery/node_modules/@chainlink/contracts/src/v0.8/shared/access/ConfirmedOwner.sol": {
-      "lastModificationDate": 1712716077177,
+      "lastModificationDate": 1712716894022,
       "contentHash": "16d64572b0310127fc8a771e63be6d20",
       "sourceName": "@chainlink/contracts/src/v0.8/shared/access/ConfirmedOwner.sol",
       "solcConfig": {
@@ -358,7 +358,7 @@
       ]
     },
     "/Users/jasmine_sprout/Desktop/full-blockchain-solidity-course-js/hardhat-lottery/node_modules/@chainlink/contracts/src/v0.8/shared/interfaces/LinkTokenInterface.sol": {
-      "lastModificationDate": 1712171405445,
+      "lastModificationDate": 1712716894002,
       "contentHash": "d10c0d716a0f43bb442c14effc9bd39f",
       "sourceName": "@chainlink/contracts/src/v0.8/shared/interfaces/LinkTokenInterface.sol",
       "solcConfig": {
@@ -400,7 +400,7 @@
       ]
     },
     "/Users/jasmine_sprout/Desktop/full-blockchain-solidity-course-js/hardhat-lottery/node_modules/@chainlink/contracts/src/v0.8/vrf/VRF.sol": {
-      "lastModificationDate": 1712716076417,
+      "lastModificationDate": 1712716714101,
       "contentHash": "bd271715d4f0b55cdb628c701a223e49",
       "sourceName": "@chainlink/contracts/src/v0.8/vrf/VRF.sol",
       "solcConfig": {
@@ -442,7 +442,7 @@
       ]
     },
     "/Users/jasmine_sprout/Desktop/full-blockchain-solidity-course-js/hardhat-lottery/node_modules/@chainlink/contracts/src/v0.8/vendor/@arbitrum/nitro-contracts/src/precompiles/ArbSys.sol": {
-      "lastModificationDate": 1712171405824,
+      "lastModificationDate": 1712717097144,
       "contentHash": "1ec6cfeeb68e3d45f9b56e0fd7f9ff23",
       "sourceName": "@chainlink/contracts/src/v0.8/vendor/@arbitrum/nitro-contracts/src/precompiles/ArbSys.sol",
       "solcConfig": {
@@ -484,7 +484,7 @@
       ]
     },
     "/Users/jasmine_sprout/Desktop/full-blockchain-solidity-course-js/hardhat-lottery/node_modules/@chainlink/contracts/src/v0.8/vendor/@arbitrum/nitro-contracts/src/precompiles/ArbGasInfo.sol": {
-      "lastModificationDate": 1712716077535,
+      "lastModificationDate": 1712717097148,
       "contentHash": "ea9e27d555279f5940fd16b47df2364a",
       "sourceName": "@chainlink/contracts/src/v0.8/vendor/@arbitrum/nitro-contracts/src/precompiles/ArbGasInfo.sol",
       "solcConfig": {
@@ -656,7 +656,7 @@
       ]
     },
     "/Users/jasmine_sprout/Desktop/full-blockchain-solidity-course-js/hardhat-lottery/node_modules/@chainlink/contracts/src/v0.8/shared/access/ConfirmedOwnerWithProposal.sol": {
-      "lastModificationDate": 1712716077179,
+      "lastModificationDate": 1712716894017,
       "contentHash": "56723eba6ecc747fee92c5ab5b0bbf7f",
       "sourceName": "@chainlink/contracts/src/v0.8/shared/access/ConfirmedOwnerWithProposal.sol",
       "solcConfig": {
@@ -700,7 +700,7 @@
       ]
     },
     "/Users/jasmine_sprout/Desktop/full-blockchain-solidity-course-js/hardhat-lottery/node_modules/@chainlink/contracts/src/v0.8/shared/interfaces/IOwnable.sol": {
-      "lastModificationDate": 1712171405440,
+      "lastModificationDate": 1712716893733,
       "contentHash": "b3ae9b7345205a0a65f3e0f89c176d88",
       "sourceName": "@chainlink/contracts/src/v0.8/shared/interfaces/IOwnable.sol",
       "solcConfig": {
@@ -742,7 +742,7 @@
       ]
     },
     "/Users/jasmine_sprout/Desktop/full-blockchain-solidity-course-js/hardhat-lottery/contracts/test/VRFCoordinatorv2Mock.sol": {
-      "lastModificationDate": 1712716117046,
+      "lastModificationDate": 1712716270348,
       "contentHash": "885fd4c64708e05dc03a0d04fdd4291d",
       "sourceName": "contracts/test/VRFCoordinatorv2Mock.sol",
       "solcConfig": {
