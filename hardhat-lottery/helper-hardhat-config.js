@@ -1,4 +1,4 @@
-const { network, ethers } = require("hardhat")
+const { ethers } = require("hardhat")
 
 const networkConfig = {
     11155111: {
