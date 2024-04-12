@@ -11,8 +11,10 @@ const SEPOLIA_RPC_URL =
     "https://eth-sepolia.g.alchemy.com/v2/FgwkdLDm60ZoSEYrzSqS4iZK6klADyPy"
 const PRIVATE_KEY = process.env.PRIVATE_KEY || "0x"
 
-const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY || ""
+const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY || "Your etherscan API key"
+
+const REPORT_GAS = process.env.REPORT_GAS || false
 
 module.exports = {
     defaultNetwork: "hardhat",
@@ -41,5 +43,13 @@ module.exports = {
         player: {
             default: 1,
         },
+    },
+
+    gasReporter: {
+        enabled: REPORT_GAS,
+        currency: "USD",
+        outputFile: "gas-report.txt",
+        noColors: true,
+        // coinmarketcap: process.env.COINMARKETCAP_API_KEY,
     },
 }

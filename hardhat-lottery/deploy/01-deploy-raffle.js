@@ -49,6 +49,13 @@ module.exports = async function ({ getNamedAccounts, deployments }) {
     }
 
     log("-------------------------")
+
+    if (developmentChains.includes(network.name)) {
+        await VRFCoordinatorV2Mock.addConsumer(subscriptionId, raffle.address)
+
+        log("Consumer is added")
+    }
+    log("------------------------------------")
 }
 
 module.exports.tags = ["all", "raffle"]
