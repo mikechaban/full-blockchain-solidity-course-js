@@ -1,3 +1,6 @@
+.vscode
+.prettierignore
+
 /node_modules
 .env
 deployments
@@ -5,6 +8,7 @@ deployments
 # Hardhat files
 /cache
 /artifacts
+artifacts
 gas-report.txt
 
 # TypeChain files

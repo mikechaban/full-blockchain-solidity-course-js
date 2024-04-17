@@ -9,10 +9,11 @@ require("dotenv").config()
 const SEPOLIA_RPC_URL =
     process.env.SEPOLIA_RPC_URL ||
     "https://eth-sepolia.g.alchemy.com/v2/FgwkdLDm60ZoSEYrzSqS4iZK6klADyPy"
-const PRIVATE_KEY = process.env.PRIVATE_KEY || "0x"
+const PRIVATE_KEY =
+    process.env.PRIVATE_KEY || "0962c6fc5f5f6de637f2c6d6df56121b971cf32648bb84dfa2ae38664eb0901e"
 
 const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY
-const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY || "Your etherscan API key"
+const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY || "1KSF5JQ4PVBS93GVBQBZAYDDNFDD4UYKZA"
 
 const REPORT_GAS = process.env.REPORT_GAS || false
 
@@ -35,6 +36,21 @@ module.exports = {
             blockConfirmations: 6,
         },
     },
+    etherscan: {
+        apiKey: {
+            sepolia: ETHERSCAN_API_KEY,
+        },
+        customChains: [
+            {
+                network: "sepolia",
+                chainId: 11155111,
+                urls: {
+                    apiURL: "https://api-sepolia.etherscan.io/api",
+                    browserURL: "https://sepolia.etherscan.io",
+                },
+            },
+        ],
+    },
     solidity: "0.8.6",
     namedAccounts: {
         deployer: {
@@ -47,12 +63,11 @@ module.exports = {
     mocha: {
         timeout: 300000, // 300 seconds max
     },
-
     gasReporter: {
         enabled: REPORT_GAS,
         currency: "USD",
         outputFile: "gas-report.txt",
         noColors: true,
-        // coinmarketcap: process.env.COINMARKETCAP_API_KEY,
+        coinmarketcap: COINMARKETCAP_API_KEY,
     },
 }
