@@ -20,7 +20,7 @@ export default function LotteryEntrance() {
 
     const { runContractFunction: getEntranceFee } = useWeb3Contract({
         abi: contractAbi,
-        contractAddresses: raffleAddress,
+        contractAddress: raffleAddress,
         functionName: "getEntranceFee",
         params: {},
     })
