@@ -1,6 +1,6 @@
 // have a function to enter the lottery
 import { useWeb3Contract } from "react-moralis"
-import { abi, contractAddresses } from "../constants"
+import { contractAbi, contractAddresses } from "../constants"
 import { useMoralis } from "react-moralis"
 import { useEffect } from "react"
 
@@ -19,8 +19,8 @@ export default function LotteryEntrance() {
     // })
 
     const { runContractFunction: getEntranceFee } = useWeb3Contract({
-        abi: abi,
-        contractAddress: raffleAddress, // specify the networkId
+        abi: contractAbi,
+        contractAddresses: raffleAddress,
         functionName: "getEntranceFee",
         params: {},
     })
@@ -28,8 +28,8 @@ export default function LotteryEntrance() {
     useEffect(() => {
         if (isWeb3Enabled) {
             async function updateUi() {
-                const entranceFeeFromContract = await getEntranceFee()
-                console.log(entranceFeeFromContract)
+                const something = await getEntranceFee()
+                console.log(something)
             }
             updateUi()
         }

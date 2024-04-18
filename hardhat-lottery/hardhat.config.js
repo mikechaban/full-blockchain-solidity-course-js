@@ -25,7 +25,7 @@ module.exports = {
             blockConfirmations: 1,
         },
         localhost: {
-            chainId: 31337,
+            chainId: 1337,
         },
         sepolia: {
             url: SEPOLIA_RPC_URL,
