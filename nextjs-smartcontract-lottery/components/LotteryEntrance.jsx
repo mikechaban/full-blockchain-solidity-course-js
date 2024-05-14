@@ -9,9 +9,9 @@ const LotteryButton = () => {
     const [recentWinner, setRecentWinner] = useState("0")
     const { chainId: chainIdhex, isWeb3Enabled } = useMoralis()
     const chainId = parseInt(chainIdhex)
-    console.log(chainId)
+    // console.log(chainId)
     const raffleAddress = chainId in contractAddresses ? contractAddresses[chainId][0] : null
-    console.log(`Raffle contract address : ${raffleAddress}`)
+    // console.log(`Raffle contract address : ${raffleAddress}`)
 
     const { runContractFunction: enterRaffle } = useWeb3Contract({
         abi: contractAbi,
@@ -69,6 +69,7 @@ const LotteryButton = () => {
             }}
             className="badge badge-pill fs-5 p-2 w-100 badge-success text-white"
         >
+            Connect Wallet
             <div>Entrance Fee: {ethers.utils.formatUnits(entranceFee, "ether")} ETH</div>
             <div>The current number of players is: {numPlayer}</div>
             <div>The previous winner was: {recentWinner}</div>
