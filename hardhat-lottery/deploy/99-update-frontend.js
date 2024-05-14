@@ -1,15 +1,11 @@
 const { ethers, network } = require("hardhat")
 const fs = require("fs")
-
-const FRONTEND_ADDRESSES_FILE = "../nextjs-smartcontract-lottery/constants/contractAddresses.json"
-const FRONTEND_ABI_FILE = "../nextjs-smartcontract-lottery/constants/abi.json"
-
+const FRONT_END_ADDRESS_FILE = "../nft-lottery-ui/constants/contractAddress.json"
+const FRONT_END_ABI_FILE = "../nft-lottery-ui/constants/abi.json"
 module.exports = async function () {
-    if (process.env.UPDATE_FRONTEND) {
-        console.log("Updating frontend...")
-
-        updateContractAddresses()
-
+    if (process.env.UPDATE_FRONT_END) {
+        console.log("Updating front end...")
+        updateContractAddress()
         updateAbi()
     }
 }
@@ -17,22 +13,22 @@ module.exports = async function () {
 async function updateAbi() {
     const raffle = await ethers.getContract("Raffle")
     const abi = raffle.interface.format(ethers.utils.FormatTypes.json)
-    fs.writeFileSync(FRONTEND_ABI_FILE, abi)
+    fs.writeFileSync(FRONT_END_ABI_FILE, abi)
 }
 
-async function updateContractAddresses() {
+async function updateContractAddress() {
     const raffle = await ethers.getContract("Raffle")
     const chainId = network.config.chainId.toString()
-    const currentAddresses = JSON.parse(fs.readFileSync(FRONTEND_ADDRESSES_FILE, "utf8"))
-    if (chainId in currentAddresses) {
-        if (!currentAddresses[chainId].includes(raffle.address)) {
-            currentAddresses[chainId].push(raffle.address)
+    const currentAddress = JSON.parse(fs.readFileSync(FRONT_END_ADDRESS_FILE, "utf8"))
+    if (chainId in currentAddress) {
+        if (!currentAddress[chainId].includes(raffle.address)) {
+            currentAddress[chainId].push(raffle.address)
         }
     }
     {
-        currentAddresses[chainId] = [raffle.address]
+        currentAddress[chainId] = [raffle.address]
     }
-    fs.writeFileSync(FRONTEND_ADDRESSES_FILE, JSON.stringify(currentAddresses))
+    fs.writeFileSync(FRONT_END_ADDRESS_FILE, JSON.stringify(currentAddress))
 }
 
 module.exports.tags = ["all", "frontend"]
